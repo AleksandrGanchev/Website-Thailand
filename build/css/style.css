@@ -765,7 +765,7 @@ ul {
   width: 150px;
   height: 46px;
   border-radius: 5px;
-  background: #255e93;
+  background: #16dcf0;
   font-size: 18px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -792,6 +792,7 @@ ul {
 }
 
 .airlines__airlines-container {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -809,6 +810,34 @@ ul {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.airlines__airlines-container::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  z-index: 998;
+  background: -webkit-gradient(linear, right top, left top, color-stop(37.31%, #ffffff), color-stop(90.59%, rgba(255, 255, 255, 0.17)));
+  background: -o-linear-gradient(right, #ffffff 37.31%, rgba(255, 255, 255, 0.17) 90.59%);
+  background: linear-gradient(270deg, #ffffff 37.31%, rgba(255, 255, 255, 0.17) 90.59%);
+}
+
+.airlines__airlines-container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  z-index: 998;
+  background: -webkit-gradient(linear, right top, left top, color-stop(37.31%, #ffffff), color-stop(90.59%, rgba(255, 255, 255, 0.17)));
+  background: -o-linear-gradient(right, #ffffff 37.31%, rgba(255, 255, 255, 0.17) 90.59%);
+  background: linear-gradient(270deg, #ffffff 37.31%, rgba(255, 255, 255, 0.17) 90.59%);
+  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+      -ms-transform: matrix(-1, 0, 0, 1, 0, 0);
+          transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 .airlines__airlines-logo {
@@ -1102,7 +1131,7 @@ ul {
   width: 150px;
   height: 46px;
   border-radius: 5px;
-  background: #255e93;
+  background: #16dcf0;
   font-size: 18px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1381,9 +1410,9 @@ ul {
   top: 0;
   right: 0;
   z-index: 5;
-  background: -webkit-gradient(linear, left top, right top, color-stop(6.25%, #255e93), to(rgba(22, 220, 240, 0.46)));
-  background: -o-linear-gradient(left, #255e93 6.25%, rgba(22, 220, 240, 0.46) 100%);
-  background: linear-gradient(90deg, #255e93 6.25%, rgba(22, 220, 240, 0.46) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(6.25%, #16dcf0), to(rgba(22, 220, 240, 0.46)));
+  background: -o-linear-gradient(left, #16dcf0 6.25%, rgba(22, 220, 240, 0.46) 100%);
+  background: linear-gradient(90deg, #16dcf0 6.25%, rgba(22, 220, 240, 0.46) 100%);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1430,9 +1459,9 @@ ul {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: -webkit-gradient(linear, left top, right top, color-stop(6.25%, #255e93), to(rgba(22, 220, 240, 0.46)));
-  background: -o-linear-gradient(left, #255e93 6.25%, rgba(22, 220, 240, 0.46) 100%);
-  background: linear-gradient(90deg, #255e93 6.25%, rgba(22, 220, 240, 0.46) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(6.25%, #16dcf0), to(rgba(22, 220, 240, 0.46)));
+  background: -o-linear-gradient(left, #16dcf0 6.25%, rgba(22, 220, 240, 0.46) 100%);
+  background: linear-gradient(90deg, #16dcf0 6.25%, rgba(22, 220, 240, 0.46) 100%);
 }
 
 .sky__card-text:hover {
@@ -2140,10 +2169,10 @@ ul {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: normal;
+    -webkit-align-items: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -2284,6 +2313,10 @@ ul {
 }
 
 @media (max-width: 576px) {
+  .airlines {
+    padding: 0;
+  }
+
   .sale__info-wrapper {
     padding: 0 16px;
   }
@@ -2345,6 +2378,10 @@ ul {
 
   .sale__container {
     height: 330px;
+  }
+
+  .sky__container {
+    padding: 0 30px;
   }
 
   .sky__subtitle {
